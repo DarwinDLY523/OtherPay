@@ -1,0 +1,13 @@
+Z:\OtherPay\SaasEntityMis\SaaS.EntityMis.Search\bin\Debug\SaaS.EntityMis.Search.dll
+Z:\OtherPay\SaasEntityMis\SaaS.EntityMis.Search\bin\Debug\SaaS.EntityMis.Search.pdb
+Z:\OtherPay\SaasEntityMis\SaaS.EntityMis.Search\bin\Debug\SaaS.Framework.dll
+Z:\OtherPay\SaasEntityMis\SaaS.EntityMis.Search\bin\Debug\log4net.dll
+Z:\OtherPay\SaasEntityMis\SaaS.EntityMis.Search\bin\Debug\ThoughtWorks.QRCode.dll
+Z:\OtherPay\SaasEntityMis\SaaS.EntityMis.Search\bin\Debug\BarCodePrint.Lib.dll
+Z:\OtherPay\SaasEntityMis\SaaS.EntityMis.Search\bin\Debug\SharpZipLib.dll
+Z:\OtherPay\SaasEntityMis\SaaS.EntityMis.Search\bin\Debug\Memcached.ClientLibrary.dll
+Z:\OtherPay\SaasEntityMis\SaaS.EntityMis.Search\bin\Debug\Newtonsoft.Json.dll
+Z:\OtherPay\SaasEntityMis\SaaS.EntityMis.Search\bin\Debug\SaaS.Framework.Encrypt.dll
+Z:\OtherPay\SaasEntityMis\SaaS.EntityMis.Search\bin\Debug\ICSharpCode.SharpZipLib.dll
+Z:\OtherPay\SaasEntityMis\SaaS.EntityMis.Search\obj\Debug\SaaS.EntityMis.Search.dll
+Z:\OtherPay\SaasEntityMis\SaaS.EntityMis.Search\obj\Debug\SaaS.EntityMis.Search.pdb

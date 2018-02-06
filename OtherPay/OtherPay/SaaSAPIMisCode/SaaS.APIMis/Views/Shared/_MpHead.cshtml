@@ -1,0 +1,45 @@
+﻿@using SaaS.EntityMis.Model;
+@using SaaS.EntityMis.Info;
+@{
+    EngineeringInfo _model =Page.engineer;
+    bool isshowTeam = true;
+    isshowTeam = Page.isShowTeam == null ? true : Page.isShowTeam;
+    
+    if(_model==null)
+    {
+        _model = new EngineeringInfo();
+    }
+    string textEnd = "预计完工时间";
+    string textStart = "预计开工时间";
+    string starTime = string.IsNullOrEmpty(_model.FEXPECTEDSTARTDATE.ToString()) ? "-" : Convert.ToDateTime(_model.FEXPECTEDSTARTDATE).ToString("yyyy-MM-dd");
+    string endTime = string.IsNullOrEmpty(_model.FPLANNEDCOMPLETIONDATE.ToString()) ? "-" : Convert.ToDateTime(_model.FPLANNEDCOMPLETIONDATE).ToString("yyyy-MM-dd");
+    if (_model.FPRACTICALCOMPLETIONDATE != null && !string.IsNullOrEmpty(_model.FPRACTICALCOMPLETIONDATE.ToString()))
+    {
+        endTime = string.IsNullOrEmpty(_model.FPRACTICALCOMPLETIONDATE.ToString()) ? "-" : Convert.ToDateTime(_model.FPRACTICALCOMPLETIONDATE).ToString("yyyy-MM-dd");
+        textEnd = "实际竣工时间";
+    }
+    if (_model.FACTUALSTARTDATE != null && !string.IsNullOrEmpty(_model.FACTUALSTARTDATE.ToString()))
+    {
+        starTime = string.IsNullOrEmpty(_model.FACTUALSTARTDATE.ToString()) ? "-" : Convert.ToDateTime(_model.FACTUALSTARTDATE).ToString("yyyy-MM-dd");
+        textStart = "实际开工时间";
+    }
+    
+}
+
+<div class="server_head pd30 mb30 halfborderbottom">
+    <div class="headimg"><img src="@_model.FOWNERHEADIMG" alt=""></div>
+    <p class="server_head_name">@_model.FENGINEERINGNAME</p>
+    <p class="server_head_time">
+        <span>@textStart</span>
+        <span>@starTime</span>
+        <span class="line"></span>
+        <span>@textEnd</span>
+        <span>@endTime</span>
+    </p>
+    @if(isshowTeam)
+    {
+         <a href="~/team/index?buildid=@_model.FID" class="right_top_link form_tag">服务团队</a>
+    }
+   
+
+</div>

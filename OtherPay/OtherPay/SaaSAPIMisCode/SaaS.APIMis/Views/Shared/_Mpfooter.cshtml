@@ -1,0 +1,58 @@
+﻿@using SaaS.EntityMis.Model;
+@{
+    string personID = Page.personID;
+    string buildid = Page.buildid;
+    List<T_ENG_SITEMEMBERMESSAGETYPE> list = SaaS.Building.BLL.SitemembermessagetypeBLL.GetListByFPersonID(personID);
+    int count1 = 0; int count2 = 0; int count3 = 0; int count4 = 0; int count = 0;
+    if (list != null)
+    {
+        count = list.Count();
+        count1 = list.Count(q => q.FMESSAGETYPE == "16"); //施工现场图
+        count2 = list.Count(q => q.FMESSAGETYPE == "3"); //缴款消息
+        count3 = list.Count(q => q.FMESSAGETYPE == "13");//设计方案
+        count4 = count - count1 - count2 - count3;//其他消息
+    }
+}
+<footer class="footer" id="footer">
+    <div class="inner clearfix">
+        <a href="~/gongdi/index?buildid=@buildid" class="link_speed active">
+            <!-- <i class="icon"></i> -->
+            <i class="icon"><i class="@(count1>0?"red_point":"")">@(count1 <= 0 ? "" : count1.ToString())</i></i>
+            装修进展
+        </a>
+        <a href="~/News/list?buildid=@buildid" class="link_message ">
+            <!-- <i class="icon"></i> -->
+            <i class="icon"><i class="@(count4>0?"red_point":"")">@(count4 <= 0 ? "" : count4.ToString())</i></i>
+            消息
+        </a>
+        <a href="javascript:" class="link_more active">
+            <i class="icon"><i class="red_point"></i></i>
+            更多
+        </a>
+        <a href="~/payment/index?buildid=@buildid" class="link_pay ">
+            <!-- <i class="icon"></i> -->
+            <i class="icon"><i class="@(count2>0?"red_point":"")">@(count2 <= 0 ? "" : count2.ToString())</i></i>
+            缴款
+        </a>
+        <a href="~/scheme/index?buildid=@buildid" class="link_design ">
+            <!-- <i class="icon"></i> -->
+            <i class="icon"><i class="@(count3>0?"red_point":"")">@(count3 <= 0 ? "" : count3.ToString())</i></i>
+            设计方案
+        </a>
+    </div>
+</footer>
+<div class="footer_mask" id="footer_mask">
+    <div class="footer_mask_links">
+        <a href="~/Mpdelay/list?buildid=@buildid" class="link_delay"><i class="icon"></i><em>装修延期</em></a>
+        <a href="~/shutdown/index?buildid=@buildid" class="link_shutdown"><i class="icon"></i><em>装修停工</em></a>
+        <a href="~/Mpevaluate/list?buildid=@buildid" class="link_evaluate"><i class="icon"></i><em>我的评价</em></a>
+        <a href="~/MpComplaint/index?buildid=@buildid" class="link_complain"><i class="icon"></i><em>投诉</em></a>
+        @*<a href="javascript:;" class="link_message"><i class="icon"></i><b class="red_point">99</b><em>留言</em></a>*@
+    </div>
+    <span class="link_more"></span>
+</div>
+<script>
+    $(function () {
+        Yihaojiaju.MSG.footerInit()
+    })
+</script>

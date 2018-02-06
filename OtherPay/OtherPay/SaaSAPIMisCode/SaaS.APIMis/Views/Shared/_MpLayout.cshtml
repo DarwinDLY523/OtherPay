@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+    <title>@(ViewBag.Title)</title>
+    <meta name="keywords" content="@(ViewBag.keywords)" />
+    <meta name="description" content="@(ViewBag.description)" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <link rel="icon" href="@Url.Content("/favicon.ico")" type="image/x-icon" />
+    
+    @Styles.Render("~/Styles/common.css")
+    @Scripts.Render("~/script/zepto.min.js")
+    @Scripts.Render("~/script/base.js")
+   
+    <script>
+
+        @*Yihaojiaju.Services.Url = '@(ViewData["ServiceUrl"])';
+        Yihaojiaju.Services.Type = 'MP';*@
+    </script>
+
+
+
+    @*头部引入文件 JS CSS 等*@
+    @RenderSection("HeadSection", false)
+
+</head>
+<body>
+
+    @RenderBody()
+
+
+ 
+</body>
+</html>

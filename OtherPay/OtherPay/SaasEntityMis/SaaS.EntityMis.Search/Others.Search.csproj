@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C42CB504-8DFC-489C-A259-CF1E3D5293C1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SaaS.EntityMis.Search</RootNamespace>
+    <AssemblyName>SaaS.EntityMis.Search</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SaaS.Framework">
+      <HintPath>..\..\dll\SaaS.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Eng\BeforeworkdataSearch.cs" />
+    <Compile Include="Eng\CashratioSearch.cs" />
+    <Compile Include="Eng\ComplaintSearch.cs" />
+    <Compile Include="Eng\DispatchingSearch.cs" />
+    <Compile Include="Eng\DurationtemplateSearch.cs" />
+    <Compile Include="Eng\EngineeringborrowSearch.cs" />
+    <Compile Include="Eng\EngineeringdelaySearch.cs" />
+    <Compile Include="Eng\EngineeringmenuSearch.cs" />
+    <Compile Include="Eng\EngineeringmessageacceptSearch.cs" />
+    <Compile Include="Eng\EngineeringmessageimageSearch.cs" />
+    <Compile Include="Eng\EngineeringmessagereadSearch.cs" />
+    <Compile Include="Eng\EngineeringmessagereplySearch.cs" />
+    <Compile Include="Eng\EngineeringmessageSearch.cs" />
+    <Compile Include="Eng\EngineeringSearch.cs" />
+    <Compile Include="Eng\EngineeringsettlementSearch.cs" />
+    <Compile Include="Eng\EngineeringstoprestartSearch.cs" />
+    <Compile Include="Eng\EvaluateSearch.cs" />
+    <Compile Include="Eng\MaintenancefundSearch.cs" />
+    <Compile Include="Eng\MaterialapplyorderentitySearch.cs" />
+    <Compile Include="Eng\MaterialapplyorderSearch.cs" />
+    <Compile Include="Eng\MessagetemplateweixinSearch.cs" />
+    <Compile Include="Eng\PositionmenuSearch.cs" />
+    <Compile Include="Eng\PressmoneySearch.cs" />
+    <Compile Include="Eng\PushrecordSearch.cs" />
+    <Compile Include="Eng\ReportSearch.cs" />
+    <Compile Include="Eng\ScheduleprogressSearch.cs" />
+    <Compile Include="Eng\SitemembermessagetypeSearch.cs" />
+    <Compile Include="Eng\SitememberSearch.cs" />
+    <Compile Include="Eng\StagecheckSearch.cs" />
+    <Compile Include="Eng\StageevaluatedetailSearch.cs" />
+    <Compile Include="Eng\StageevaluateSearch.cs" />
+    <Compile Include="Eng\StageimagelableSearch.cs" />
+    <Compile Include="Eng\StageinspectionrecordSearch.cs" />
+    <Compile Include="Eng\StagesupervisorrecordSearch.cs" />
+    <Compile Include="Eng\WechtaqyweixinSearch.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

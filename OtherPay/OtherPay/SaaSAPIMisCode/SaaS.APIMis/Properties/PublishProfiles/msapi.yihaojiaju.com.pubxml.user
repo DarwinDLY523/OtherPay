@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>E:\saas.com\msapi.saas.com</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>11/19/2017 20:35:51</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>11/19/2017 20:35:52</publishTime>
+    </File>
+    <File Include="bin/BarCodePrint.Lib.dll">
+      <publishTime>11/19/2017 20:40:55</publishTime>
+    </File>
+    <File Include="bin/ICSharpCode.SharpZipLib.dll">
+      <publishTime>11/19/2017 20:40:55</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>11/19/2017 20:40:58</publishTime>
+    </File>
+    <File Include="bin/Memcached.ClientLibrary.dll">
+      <publishTime>11/19/2017 20:40:55</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>11/19/2017 20:36:00</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>11/19/2017 20:36:02</publishTime>
+    </File>
+    <File Include="bin/Others.Pay.dll">
+      <publishTime>01/10/2018 10:23:22</publishTime>
+    </File>
+    <File Include="bin/Others.Pay.pdb">
+      <publishTime>01/10/2018 10:23:22</publishTime>
+    </File>
+    <File Include="bin/SaaS.BLL.dll">
+      <publishTime>01/10/2018 10:23:21</publishTime>
+    </File>
+    <File Include="bin/SaaS.BLL.pdb">
+      <publishTime>01/10/2018 10:23:21</publishTime>
+    </File>
+    <File Include="bin/SaaS.Entity.Enums.dll">
+      <publishTime>11/19/2017 20:40:51</publishTime>
+    </File>
+    <File Include="bin/SaaS.Entity.Info.dll">
+      <publishTime>11/19/2017 20:40:51</publishTime>
+    </File>
+    <File Include="bin/SaaS.Entity.Model.dll">
+      <publishTime>11/19/2017 20:40:51</publishTime>
+    </File>
+    <File Include="bin/SaaS.Entity.Search.dll">
+      <publishTime>11/19/2017 20:40:51</publishTime>
+    </File>
+    <File Include="bin/SaaS.EntityMis.Enums.dll">
+      <publishTime>01/10/2018 10:23:20</publishTime>
+    </File>
+    <File Include="bin/SaaS.EntityMis.Enums.pdb">
+      <publishTime>01/10/2018 10:23:20</publishTime>
+    </File>
+    <File Include="bin/SaaS.EntityMis.Info.dll">
+      <publishTime>01/10/2018 10:23:20</publishTime>
+    </File>
+    <File Include="bin/SaaS.EntityMis.Info.pdb">
+      <publishTime>01/10/2018 10:23:20</publishTime>
+    </File>
+    <File Include="bin/SaaS.EntityMis.Model.dll">
+      <publishTime>01/10/2018 10:23:20</publishTime>
+    </File>
+    <File Include="bin/SaaS.EntityMis.Model.pdb">
+      <publishTime>01/10/2018 10:23:20</publishTime>
+    </File>
+    <File Include="bin/SaaS.EntityMis.Search.dll">
+      <publishTime>01/10/2018 10:23:20</publishTime>
+    </File>
+    <File Include="bin/SaaS.EntityMis.Search.pdb">
+      <publishTime>01/10/2018 10:23:20</publishTime>
+    </File>
+    <File Include="bin/SaaS.Factory.dll">
+      <publishTime>01/10/2018 10:23:21</publishTime>
+    </File>
+    <File Include="bin/SaaS.Factory.pdb">
+      <publishTime>01/10/2018 10:23:21</publishTime>
+    </File>
+    <File Include="bin/SaaS.Framework.dll">
+      <publishTime>11/19/2017 20:40:51</publishTime>
+    </File>
+    <File Include="bin/SaaS.Framework.Encrypt.dll">
+      <publishTime>11/19/2017 20:40:52</publishTime>
+    </File>
+    <File Include="bin/SaaS.InterfaceDAL.dll">
+      <publishTime>01/10/2018 10:23:21</publishTime>
+    </File>
+    <File Include="bin/SaaS.InterfaceDAL.pdb">
+      <publishTime>01/10/2018 10:23:21</publishTime>
+    </File>
+    <File Include="bin/SaaS.OracleDAL.dll">
+      <publishTime>01/10/2018 10:23:21</publishTime>
+    </File>
+    <File Include="bin/SaaS.OracleDAL.pdb">
+      <publishTime>01/10/2018 10:23:21</publishTime>
+    </File>
+    <File Include="bin/SharpZipLib.dll">
+      <publishTime>11/19/2017 20:40:58</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>11/19/2017 20:35:54</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>11/19/2017 20:35:59</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>11/19/2017 20:35:56</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>11/19/2017 20:35:58</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>11/19/2017 20:35:52</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>11/19/2017 20:35:53</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>11/19/2017 20:35:53</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>11/19/2017 20:35:59</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>11/19/2017 20:35:59</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>11/19/2017 20:35:59</publishTime>
+    </File>
+    <File Include="bin/ThoughtWorks.QRCode.dll">
+      <publishTime>11/19/2017 20:40:58</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>11/19/2017 20:36:03</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.Formatting.resources.dll">
+      <publishTime>11/19/2017 20:35:54</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Helpers.resources.dll">
+      <publishTime>11/19/2017 20:35:59</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Http.resources.dll">
+      <publishTime>11/19/2017 20:35:56</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Http.WebHost.resources.dll">
+      <publishTime>11/19/2017 20:35:58</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Mvc.resources.dll">
+      <publishTime>11/19/2017 20:35:52</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Optimization.resources.dll">
+      <publishTime>11/19/2017 20:35:54</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Razor.resources.dll">
+      <publishTime>11/19/2017 20:35:53</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Deployment.resources.dll">
+      <publishTime>11/19/2017 20:35:59</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Razor.resources.dll">
+      <publishTime>11/19/2017 20:35:59</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.resources.dll">
+      <publishTime>11/19/2017 20:35:59</publishTime>
+    </File>
+    <File Include="Config/DB.xml">
+      <publishTime>11/19/2017 20:35:00</publishTime>
+    </File>
+    <File Include="Config/OfferVersionInfo.xml">
+      <publishTime>11/19/2017 20:35:00</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>11/19/2017 23:21:22</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>11/19/2017 20:35:00</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>11/19/2017 20:35:00</publishTime>
+    </File>
+    <File Include="IP/ip.exe">
+      <publishTime>11/19/2017 20:34:59</publishTime>
+    </File>
+    <File Include="IP/License.txt">
+      <publishTime>11/19/2017 20:34:59</publishTime>
+    </File>
+    <File Include="IP/qqwry.dat">
+      <publishTime>11/19/2017 20:35:00</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>11/19/2017 20:35:00</publishTime>
+    </File>
+    <File Include="script/base.js">
+      <publishTime>11/19/2017 23:54:58</publishTime>
+    </File>
+    <File Include="script/zepto.min.js">
+      <publishTime>11/20/2017 00:10:37</publishTime>
+    </File>
+    <File Include="Styles/common.css">
+      <publishTime>11/20/2017 00:18:42</publishTime>
+    </File>
+    <File Include="Views/HuiHe/GetQrCode.cshtml">
+      <publishTime>11/20/2017 16:45:58</publishTime>
+    </File>
+    <File Include="Views/HuiHe/pay.cshtml">
+      <publishTime>11/20/2017 17:16:29</publishTime>
+    </File>
+    <File Include="Views/HuiHe/PayTo.cshtml">
+      <publishTime>11/20/2017 17:48:17</publishTime>
+    </File>
+    <File Include="Views/HuiHe/QrCode.cshtml">
+      <publishTime>11/20/2017 16:48:28</publishTime>
+    </File>
+    <File Include="Views/Huitong/GetQrCode.cshtml">
+      <publishTime>01/10/2018 09:18:07</publishTime>
+    </File>
+    <File Include="Views/Huitong/pay.cshtml">
+      <publishTime>01/10/2018 10:23:17</publishTime>
+    </File>
+    <File Include="Views/Huitong/PayTo.cshtml">
+      <publishTime>01/10/2018 10:13:30</publishTime>
+    </File>
+    <File Include="Views/Huitong/QrCode.cshtml">
+      <publishTime>01/10/2018 09:18:07</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>11/19/2017 23:21:21</publishTime>
+    </File>
+    <File Include="Views/Shared/_Mpfooter.cshtml">
+      <publishTime>11/19/2017 23:34:38</publishTime>
+    </File>
+    <File Include="Views/Shared/_MpHead.cshtml">
+      <publishTime>11/19/2017 23:34:38</publishTime>
+    </File>
+    <File Include="Views/Shared/_MpLayout.cshtml">
+      <publishTime>11/20/2017 00:17:43</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>11/19/2017 23:29:19</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>11/19/2017 23:21:19</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>01/10/2018 10:23:38</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

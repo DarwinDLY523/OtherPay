@@ -1,0 +1,4 @@
+E:\yhjj.com\weixin\code\Mobile\YiHao.Mobile\Yihao.Mobile.TenpayLib\bin\Debug\Yihao.Mobile.TenpayLib.dll
+E:\yhjj.com\weixin\code\Mobile\YiHao.Mobile\Yihao.Mobile.TenpayLib\bin\Debug\Yihao.Mobile.TenpayLib.pdb
+E:\yhjj.com\weixin\code\Mobile\YiHao.Mobile\Yihao.Mobile.TenpayLib\obj\Debug\Yihao.Mobile.TenpayLib.dll
+E:\yhjj.com\weixin\code\Mobile\YiHao.Mobile\Yihao.Mobile.TenpayLib\obj\Debug\Yihao.Mobile.TenpayLib.pdb

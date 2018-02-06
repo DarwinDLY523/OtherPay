@@ -1,0 +1,185 @@
+﻿@{
+    Layout = "~/Views/Shared/_MpLayout.cshtml";
+    ViewBag.Title = "汇通支付";
+}
+
+@section HeadSection
+{
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            border-radius: 0;
+            -webkit-appearance: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            background: none;
+        }
+
+        body {
+            padding: 15px;
+        }
+
+        .title {
+            font-size: 18px;
+            line-height: 2;
+            padding: 15px 0;
+            text-align: center;
+            color: #333;
+        }
+
+        .label {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            font-size: 14px;
+            line-height: 1.5;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .label_b,
+        .label_t {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .label_t {
+            padding-right: 10px;
+            color: #666;
+        }
+
+        .label_b {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+            height: 29px;
+            border: 1px solid #e5e5e5;
+            padding: 3px 10px;
+            box-sizing: content-box;
+            border-radius: 4px;
+        }
+
+        .label select.label_b {
+            background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAKCAYAAADYUyzjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NUMyQzhDM0I2RjRBMTFFNjhGQzZCM0JBNDI4RTJCMkEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NUMyQzhDM0M2RjRBMTFFNjhGQzZCM0JBNDI4RTJCMkEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1QzJDOEMzOTZGNEExMUU2OEZDNkIzQkE0MjhFMkIyQSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1QzJDOEMzQTZGNEExMUU2OEZDNkIzQkE0MjhFMkIyQSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Ph/x8O4AAABgSURBVHjavNFBCgAxCAPA2Mf6J1/bpTeR2m4Fk7OSQUVVJwBBLWsXZlbdTzN8QQXVlVEs8rPSBZNHXDvKX+wvjoKKr7zhaKgIO+GoqB1sh6OjMlgGoKFOsAiholY+AQYAnikTEummWXwAAAAASUVORK5CYII=") no-repeat right center / 19px auto;
+        }
+
+        .label_f {
+            padding-left: 10px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            line-height: 25px;
+            background: #09BB07;
+            color: #fff;
+            border-radius: 4px;
+        }
+
+            .btn:active {
+                box-shadow: 0 0 50px rgba(0, 0, 0, 0.1) inset;
+            }
+
+        .message {
+            font-size: 12px;
+            line-height: 1.25;
+            padding-top: 10px;
+            display: block;
+        }
+
+        /*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4Lmxlc3MiLCJpbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxVQUFBO0VBQ0EsV0FBQTtFQUNBLFVBQUE7RUFDQSxXQUFBO0VBQ0EsaUJBQUE7RUFDQSx5QkFBQTtFQUNBLDhDQUFBO0VBQ0EsaUJBQUE7Q0NDRDtBREVEO0VBQ0UsY0FBQTtDQ0FEO0FER0Q7RUFDRSxnQkFBQTtFQUNBLGVBQUE7RUFDQSxnQkFBQTtFQUNBLG1CQUFBO0VBQ0EsWUFBQTtDQ0REO0FER0Q7RUFDRSxxQkFBQTtFQUFBLHNCQUFBO0VBQUEsY0FBQTtFQUNBLGdCQUFBO0VBQ0EsaUJBQUE7RUFDQSx5QkFBQTtFQUFBLGdDQUFBO1VBQUEsd0JBQUE7RUFDQSwwQkFBQTtFQUFBLDRCQUFBO1VBQUEsb0JBQUE7RUFDQSxvQkFBQTtDQ0REO0FES0Q7O0VBRUUsZ0JBQUE7RUFDQSxpQkFBQTtDQ0hEO0FETUQ7RUFDRSxvQkFBQTtFQUNBLFlBQUE7Q0NKRDtBRE1EO0VBQ0Usb0JBQUE7RUFBQSxnQkFBQTtVQUFBLFFBQUE7RUFDQSxhQUFBO0VBQ0EsMEJBQUE7RUFDQSxrQkFBQTtFQUNBLHdCQUFBO0VBQ0EsbUJBQUE7Q0NKRDtBRE9EO0VBQ0UseTRDQUFBO0NDTEQ7QURRRDtFQUNFLG1CQUFBO0NDTkQ7QURTRDtFQUNFLGVBQUE7RUFDQSxZQUFBO0VBQ0EsZ0JBQUE7RUFDQSxnQkFBQTtFQUNBLGtCQUFBO0VBQ0Esb0JBQUE7RUFDQSxZQUFBO0VBQ0EsbUJBQUE7Q0NQRDtBRFNEO0VBQ0UsOENBQUE7Q0NQRDtBRFVEO0VBQ0UsZ0JBQUE7RUFDQSxrQkFBQTtFQUNBLGtCQUFBO0VBQ0EsZUFBQTtDQ1JEIiwiZmlsZSI6ImluZGV4LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIioge1xyXG4gIG1hcmdpbjogMDtcclxuICBwYWRkaW5nOiAwO1xyXG4gIGJvcmRlcjogMDtcclxuICBvdXRsaW5lOiAwO1xyXG4gIGJvcmRlci1yYWRpdXM6IDA7XHJcbiAgLXdlYmtpdC1hcHBlYXJhbmNlOiBub25lO1xyXG4gIC13ZWJraXQtdGFwLWhpZ2hsaWdodC1jb2xvcjogcmdiYSgwLCAwLCAwLCAwKTtcclxuICBiYWNrZ3JvdW5kOiBub25lO1xyXG59XHJcblxyXG5ib2R5IHtcclxuICBwYWRkaW5nOiAxNXB4O1xyXG59XHJcblxyXG4udGl0bGUge1xyXG4gIGZvbnQtc2l6ZTogMThweDtcclxuICBsaW5lLWhlaWdodDogMjtcclxuICBwYWRkaW5nOiAxNXB4IDA7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIGNvbG9yOiAjMzMzO1xyXG59XHJcbi5sYWJlbCB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmb250LXNpemU6IDE0cHg7XHJcbiAgbGluZS1oZWlnaHQ6IDEuNTtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIG1hcmdpbi1ib3R0b206IDE1cHg7XHJcbn1cclxuXHJcblxyXG4ubGFiZWxfYixcclxuLmxhYmVsX3Qge1xyXG4gIGZvbnQtc2l6ZTogMTRweDtcclxuICBsaW5lLWhlaWdodDogMS41O1xyXG59XHJcblxyXG4ubGFiZWxfdHtcclxuICBwYWRkaW5nLXJpZ2h0OiAxMHB4O1xyXG4gIGNvbG9yOiAjNjY2O1xyXG59XHJcbi5sYWJlbF9ie1xyXG4gIGZsZXg6IDE7XHJcbiAgaGVpZ2h0OiAyOXB4O1xyXG4gIGJvcmRlcjogMXB4IHNvbGlkICNlNWU1ZTU7XHJcbiAgcGFkZGluZzogM3B4IDEwcHg7XHJcbiAgYm94LXNpemluZzogY29udGVudC1ib3g7XHJcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xyXG59XHJcblxyXG4ubGFiZWwgc2VsZWN0LmxhYmVsX2Ige1xyXG4gIGJhY2tncm91bmQ6IHVybChcImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBQ1lBQUFBS0NBWUFBQURZVXl6akFBQUFHWFJGV0hSVGIyWjBkMkZ5WlFCQlpHOWlaU0JKYldGblpWSmxZV1I1Y2NsbFBBQUFBeUpwVkZoMFdFMU1PbU52YlM1aFpHOWlaUzU0YlhBQUFBQUFBRHcvZUhCaFkydGxkQ0JpWldkcGJqMGk3N3UvSWlCcFpEMGlWelZOTUUxd1EyVm9hVWg2Y21WVGVrNVVZM3ByWXpsa0lqOCtJRHg0T25odGNHMWxkR0VnZUcxc2JuTTZlRDBpWVdSdlltVTZibk02YldWMFlTOGlJSGc2ZUcxd2RHczlJa0ZrYjJKbElGaE5VQ0JEYjNKbElEVXVNeTFqTURFeElEWTJMakUwTlRZMk1Td2dNakF4TWk4d01pOHdOaTB4TkRvMU5qb3lOeUFnSUNBZ0lDQWdJajRnUEhKa1pqcFNSRVlnZUcxc2JuTTZjbVJtUFNKb2RIUndPaTh2ZDNkM0xuY3pMbTl5Wnk4eE9UazVMekF5THpJeUxYSmtaaTF6ZVc1MFlYZ3Ribk1qSWo0Z1BISmtaanBFWlhOamNtbHdkR2x2YmlCeVpHWTZZV0p2ZFhROUlpSWdlRzFzYm5NNmVHMXdQU0pvZEhSd09pOHZibk11WVdSdlltVXVZMjl0TDNoaGNDOHhMakF2SWlCNGJXeHVjenA0YlhCTlRUMGlhSFIwY0RvdkwyNXpMbUZrYjJKbExtTnZiUzk0WVhBdk1TNHdMMjF0THlJZ2VHMXNibk02YzNSU1pXWTlJbWgwZEhBNkx5OXVjeTVoWkc5aVpTNWpiMjB2ZUdGd0x6RXVNQzl6Vkhsd1pTOVNaWE52ZFhKalpWSmxaaU1pSUhodGNEcERjbVZoZEc5eVZHOXZiRDBpUVdSdlltVWdVR2h2ZEc5emFHOXdJRU5UTmlBb1YybHVaRzkzY3lraUlIaHRjRTFOT2tsdWMzUmhibU5sU1VROUluaHRjQzVwYVdRNk5VTXlRemhETTBJMlJqUkJNVEZGTmpoR1F6WkNNMEpCTkRJNFJUSkNNa0VpSUhodGNFMU5Pa1J2WTNWdFpXNTBTVVE5SW5odGNDNWthV1E2TlVNeVF6aERNME0yUmpSQk1URkZOamhHUXpaQ00wSkJOREk0UlRKQ01rRWlQaUE4ZUcxd1RVMDZSR1Z5YVhabFpFWnliMjBnYzNSU1pXWTZhVzV6ZEdGdVkyVkpSRDBpZUcxd0xtbHBaRG8xUXpKRE9FTXpPVFpHTkVFeE1VVTJPRVpETmtJelFrRTBNamhGTWtJeVFTSWdjM1JTWldZNlpHOWpkVzFsYm5SSlJEMGllRzF3TG1ScFpEbzFRekpET0VNelFUWkdORUV4TVVVMk9FWkROa0l6UWtFME1qaEZNa0l5UVNJdlBpQThMM0prWmpwRVpYTmpjbWx3ZEdsdmJqNGdQQzl5WkdZNlVrUkdQaUE4TDNnNmVHMXdiV1YwWVQ0Z1BEOTRjR0ZqYTJWMElHVnVaRDBpY2lJL1BoL3g4TzRBQUFCZ1NVUkJWSGphdk5GQkNnQXhDQVBBMk1mNkoxL2JwVGVSMm00Rms3T1NRVVZWSndCQkxXc1habGJkVHpOOFFRWFZsVkVzOHJQU0JaTkhYRHZLWCt3dmpvS0tyN3poYUtnSU8rR29xQjFzaDZPak1sZ0dvS0ZPc0FpaG9sWStBUVlBbmlrVEV1bW1XWHdBQUFBQVNVVk9SSzVDWUlJPVwiKSBuby1yZXBlYXQgcmlnaHQgY2VudGVyIC8gMTlweCBhdXRvO1xyXG59XHJcblxyXG4ubGFiZWxfZiB7XHJcbiAgcGFkZGluZy1sZWZ0OiAxMHB4O1xyXG59XHJcblxyXG4uYnRue1xyXG4gIGRpc3BsYXk6IGJsb2NrO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIHBhZGRpbmc6IDEwcHggMDtcclxuICBmb250LXNpemU6IDE2cHg7XHJcbiAgbGluZS1oZWlnaHQ6IDI1cHg7XHJcbiAgYmFja2dyb3VuZDogIzA5QkIwNztcclxuICBjb2xvcjogI2ZmZjtcclxuICBib3JkZXItcmFkaXVzOiA0cHg7XHJcbn1cclxuLmJ0bjphY3RpdmV7XHJcbiAgYm94LXNoYWRvdzogMCAwIDUwcHggcmdiYSgwLDAsMCwwLjEpIGluc2V0XHJcbn1cclxuXHJcbi5tZXNzYWdle1xyXG4gIGZvbnQtc2l6ZTogMTJweDtcclxuICBsaW5lLWhlaWdodDogMS4yNTtcclxuICBwYWRkaW5nLXRvcDogMTBweDtcclxuICBkaXNwbGF5OiBibG9jaztcclxufSIsIioge1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IDA7XG4gIGJvcmRlcjogMDtcbiAgb3V0bGluZTogMDtcbiAgYm9yZGVyLXJhZGl1czogMDtcbiAgLXdlYmtpdC1hcHBlYXJhbmNlOiBub25lO1xuICAtd2Via2l0LXRhcC1oaWdobGlnaHQtY29sb3I6IHJnYmEoMCwgMCwgMCwgMCk7XG4gIGJhY2tncm91bmQ6IG5vbmU7XG59XG5ib2R5IHtcbiAgcGFkZGluZzogMTVweDtcbn1cbi50aXRsZSB7XG4gIGZvbnQtc2l6ZTogMThweDtcbiAgbGluZS1oZWlnaHQ6IDI7XG4gIHBhZGRpbmc6IDE1cHggMDtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBjb2xvcjogIzMzMztcbn1cbi5sYWJlbCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZvbnQtc2l6ZTogMTRweDtcbiAgbGluZS1oZWlnaHQ6IDEuNTtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIG1hcmdpbi1ib3R0b206IDE1cHg7XG59XG4ubGFiZWxfYixcbi5sYWJlbF90IHtcbiAgZm9udC1zaXplOiAxNHB4O1xuICBsaW5lLWhlaWdodDogMS41O1xufVxuLmxhYmVsX3Qge1xuICBwYWRkaW5nLXJpZ2h0OiAxMHB4O1xuICBjb2xvcjogIzY2Njtcbn1cbi5sYWJlbF9iIHtcbiAgZmxleDogMTtcbiAgaGVpZ2h0OiAyOXB4O1xuICBib3JkZXI6IDFweCBzb2xpZCAjZTVlNWU1O1xuICBwYWRkaW5nOiAzcHggMTBweDtcbiAgYm94LXNpemluZzogY29udGVudC1ib3g7XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbn1cbi5sYWJlbCBzZWxlY3QubGFiZWxfYiB7XG4gIGJhY2tncm91bmQ6IHVybChcImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBQ1lBQUFBS0NBWUFBQURZVXl6akFBQUFHWFJGV0hSVGIyWjBkMkZ5WlFCQlpHOWlaU0JKYldGblpWSmxZV1I1Y2NsbFBBQUFBeUpwVkZoMFdFMU1PbU52YlM1aFpHOWlaUzU0YlhBQUFBQUFBRHcvZUhCaFkydGxkQ0JpWldkcGJqMGk3N3UvSWlCcFpEMGlWelZOTUUxd1EyVm9hVWg2Y21WVGVrNVVZM3ByWXpsa0lqOCtJRHg0T25odGNHMWxkR0VnZUcxc2JuTTZlRDBpWVdSdlltVTZibk02YldWMFlTOGlJSGc2ZUcxd2RHczlJa0ZrYjJKbElGaE5VQ0JEYjNKbElEVXVNeTFqTURFeElEWTJMakUwTlRZMk1Td2dNakF4TWk4d01pOHdOaTB4TkRvMU5qb3lOeUFnSUNBZ0lDQWdJajRnUEhKa1pqcFNSRVlnZUcxc2JuTTZjbVJtUFNKb2RIUndPaTh2ZDNkM0xuY3pMbTl5Wnk4eE9UazVMekF5THpJeUxYSmtaaTF6ZVc1MFlYZ3Ribk1qSWo0Z1BISmtaanBFWlhOamNtbHdkR2x2YmlCeVpHWTZZV0p2ZFhROUlpSWdlRzFzYm5NNmVHMXdQU0pvZEhSd09pOHZibk11WVdSdlltVXVZMjl0TDNoaGNDOHhMakF2SWlCNGJXeHVjenA0YlhCTlRUMGlhSFIwY0RvdkwyNXpMbUZrYjJKbExtTnZiUzk0WVhBdk1TNHdMMjF0THlJZ2VHMXNibk02YzNSU1pXWTlJbWgwZEhBNkx5OXVjeTVoWkc5aVpTNWpiMjB2ZUdGd0x6RXVNQzl6Vkhsd1pTOVNaWE52ZFhKalpWSmxaaU1pSUhodGNEcERjbVZoZEc5eVZHOXZiRDBpUVdSdlltVWdVR2h2ZEc5emFHOXdJRU5UTmlBb1YybHVaRzkzY3lraUlIaHRjRTFOT2tsdWMzUmhibU5sU1VROUluaHRjQzVwYVdRNk5VTXlRemhETTBJMlJqUkJNVEZGTmpoR1F6WkNNMEpCTkRJNFJUSkNNa0VpSUhodGNFMU5Pa1J2WTNWdFpXNTBTVVE5SW5odGNDNWthV1E2TlVNeVF6aERNME0yUmpSQk1URkZOamhHUXpaQ00wSkJOREk0UlRKQ01rRWlQaUE4ZUcxd1RVMDZSR1Z5YVhabFpFWnliMjBnYzNSU1pXWTZhVzV6ZEdGdVkyVkpSRDBpZUcxd0xtbHBaRG8xUXpKRE9FTXpPVFpHTkVFeE1VVTJPRVpETmtJelFrRTBNamhGTWtJeVFTSWdjM1JTWldZNlpHOWpkVzFsYm5SSlJEMGllRzF3TG1ScFpEbzFRekpET0VNelFUWkdORUV4TVVVMk9FWkROa0l6UWtFME1qaEZNa0l5UVNJdlBpQThMM0prWmpwRVpYTmpjbWx3ZEdsdmJqNGdQQzl5WkdZNlVrUkdQaUE4TDNnNmVHMXdiV1YwWVQ0Z1BEOTRjR0ZqYTJWMElHVnVaRDBpY2lJL1BoL3g4TzRBQUFCZ1NVUkJWSGphdk5GQkNnQXhDQVBBMk1mNkoxL2JwVGVSMm00Rms3T1NRVVZWSndCQkxXc1habGJkVHpOOFFRWFZsVkVzOHJQU0JaTkhYRHZLWCt3dmpvS0tyN3poYUtnSU8rR29xQjFzaDZPak1sZ0dvS0ZPc0FpaG9sWStBUVlBbmlrVEV1bW1XWHdBQUFBQVNVVk9SSzVDWUlJPVwiKSBuby1yZXBlYXQgcmlnaHQgY2VudGVyIC8gMTlweCBhdXRvO1xufVxuLmxhYmVsX2Yge1xuICBwYWRkaW5nLWxlZnQ6IDEwcHg7XG59XG4uYnRuIHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIHdpZHRoOiAxMDAlO1xuICBwYWRkaW5nOiAxMHB4IDA7XG4gIGZvbnQtc2l6ZTogMTZweDtcbiAgbGluZS1oZWlnaHQ6IDI1cHg7XG4gIGJhY2tncm91bmQ6ICMwOUJCMDc7XG4gIGNvbG9yOiAjZmZmO1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG59XG4uYnRuOmFjdGl2ZSB7XG4gIGJveC1zaGFkb3c6IDAgMCA1MHB4IHJnYmEoMCwgMCwgMCwgMC4xKSBpbnNldDtcbn1cbi5tZXNzYWdlIHtcbiAgZm9udC1zaXplOiAxMnB4O1xuICBsaW5lLWhlaWdodDogMS4yNTtcbiAgcGFkZGluZy10b3A6IDEwcHg7XG4gIGRpc3BsYXk6IGJsb2NrO1xufVxuIl19 */
+    </style>
+
+}
+
+
+
+
+<div class="title">《汇通支付》</div>
+<div class="label">
+    <span class="label_t">付款方式：</span>
+    <select class="label_b" id="trade_type">
+        <option value="weixin">微信扫码</option>
+        <option value="bdpay">百度扫码支付</option>
+        <option value="jdpay">京东扫码</option>
+        <option value="tenpaywap">qq支付</option>
+        <option value="qqmobile">qq扫码</option>
+        <option value="alipay">支付宝扫码</option>
+        <option value="alipaywap">支付宝wap</option>
+        <option value="wxwap">微信wap</option>
+        <option value="weixincode">微信付款码</option>
+        <option value="alipaycode">支付宝付款码</option>
+        <option value="yinlian">银联</option>
+        <option value=" BCCB-NET-B2C">北京银行</option>
+        <option value=" BEA-NET-B2C">东亚银行</option>
+        <option value="ICBC-NET-B2C">工商银行</option>
+        <option value="CEB-NET-B2C">光大银行</option>
+        <option value="CGB-NET-B2C">广发银行</option>
+        <option value="CCB-NET-B2C">建设银行</option>
+        <option value="BOCOM-NET-B2C">交通银行</option>
+        <option value=" CMBC-NET-B2C">民生银行</option>
+        <option value="NJCB-NET-B2C">南京银行</option>
+        <option value="NBCB-NET-B2C">宁波银行</option>
+        <option value="ABC-NET-B2C">农业银行</option>
+        <option value="PINGAN-NET-B2C">平安银行</option>
+        <option value="SPDB-NET-B2C">浦发银行</option>
+        <option value="SRCB-NET-B2C">上海农商行</option>
+        <option value="CIB-NET-B2C">兴业银行</option>
+        <option value="POST-NET-B2C">邮政储蓄银行</option>
+        <option value="CMB-NET-B2C">招商银行</option>
+        <option value="BOC-NET-B2C">中国银行</option>
+        <option value="CITIC-NET-B2C">中信银行</option>
+    </select>
+</div>
+<div class="label">
+    <span class="label_t">存款金额：</span>
+    <input type="text"
+           class="label_b"
+           placeholder="请输入存款金额"
+           id="total_fee"
+           onkeyup="this.value=this.value.replace(/\D/g, '')" />
+    <span class="label_f"> 元</span>
+</div>
+<div>
+    <input type="button" class="btn" value="提交" onclick="onPay();" />
+ 
+</div>
+
+<script>
+
+    $('.btn').click(function () {
+        var payType = $('#trade_type').val();
+        var payAmount = $('#total_fee').val();
+        if (!validate.isInteger(payAmount)) {
+            OtherPay.MSG.alert("请输入正确的数字");
+            return false;
+
+        }
+        if (payAmount <= 0 || payAmount > 100000000) {
+            OtherPay.MSG.alert("请输入0.01-100000000范围内的金额");
+            return false;
+        }
+        window.location.href = "/huitong/payto?payType=" + payType + "&payAmount=" + payAmount;
+        //OtherPay.ACT.ajaxPost("/huihe/index", {
+        //    payType: payType, payAmount: payAmount,
+        //}, function (data) {
+        //    if (data.Success) {
+
+        //    }
+        //    else {
+        //        OtherPay.MSG.alert(data.Message);
+        //    }
+        //});
+    })
+
+
+</script>

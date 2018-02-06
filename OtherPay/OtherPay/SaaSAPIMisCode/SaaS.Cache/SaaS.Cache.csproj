@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{089348D1-C7B5-492C-A364-AF3335F73B99}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SaaS.Cache</RootNamespace>
+    <AssemblyName>SaaS.Cache</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SaaS.Entity.Info, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\SaaS.Entity\SaaS.Entity.Info.dll</HintPath>
+    </Reference>
+    <Reference Include="SaaS.Framework">
+      <HintPath>..\..\dll\SaaS.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CacheConstants.cs" />
+    <Compile Include="Eng\MessagetemplateweixinCache.cs" />
+    <Compile Include="Eng\WechtaqyweixinCache.cs" />
+    <Compile Include="Login\UserCache.cs" />
+    <Compile Include="Oa\DailybulletinCache.cs" />
+    <Compile Include="Oa\TodoacceptCache.cs" />
+    <Compile Include="Oa\TodoCache.cs" />
+    <Compile Include="Org\PersonCache.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sup\MaterialCache.cs" />
+    <Compile Include="Sys\CodeCache.cs" />
+    <Compile Include="Sys\PeriodnumberCache.cs" />
+    <Compile Include="Sys\SysCache.cs" />
+    <Compile Include="Sys\PositionnumbermappingCache.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SaasEntityMis\SaaS.EntityMis.Enums\SaaS.EntityMis.Enums.csproj">
+      <Project>{b9a764f6-166d-4784-8517-44eed3f461a9}</Project>
+      <Name>SaaS.EntityMis.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SaasEntityMis\SaaS.EntityMis.Info\SaaS.EntityMis.Info.csproj">
+      <Project>{8418bc2d-1dcd-4058-a27b-1ac81f0a3abf}</Project>
+      <Name>SaaS.EntityMis.Info</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SaasEntityMis\SaaS.EntityMis.Model\SaaS.EntityMis.Model.csproj">
+      <Project>{4e17f31b-856c-41d3-b985-e5ad504f4168}</Project>
+      <Name>SaaS.EntityMis.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SaasEntityMis\SaaS.EntityMis.Search\SaaS.EntityMis.Search.csproj">
+      <Project>{c42cb504-8dfc-489c-a259-cf1e3d5293c1}</Project>
+      <Name>SaaS.EntityMis.Search</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SaaS.Factory\SaaS.Factory.csproj">
+      <Project>{946ef5ee-4359-479a-8226-eed713681bd9}</Project>
+      <Name>SaaS.Factory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SaaS.InterfaceDAL\SaaS.InterfaceDAL.csproj">
+      <Project>{672cffad-4016-4173-b1e4-6958ae8d8454}</Project>
+      <Name>SaaS.InterfaceDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SaaS.OracleDAL\SaaS.OracleDAL.csproj">
+      <Project>{1aabf018-f8ba-4287-bd3a-eec068547968}</Project>
+      <Name>SaaS.OracleDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

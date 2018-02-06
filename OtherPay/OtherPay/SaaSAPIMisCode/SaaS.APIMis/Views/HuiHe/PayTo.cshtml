@@ -1,0 +1,112 @@
+﻿@using SaaS.EntityMis.Model.HuiHe
+@using SaaS.Framework.Common
+@model HuiHePayResult
+
+
+@{
+    Layout = "~/Views/Shared/_MpLayout.cshtml";
+    ViewBag.Title = "汇合支付";
+    bool isImg = ViewBag.IsImg;
+}
+
+@section HeadSection
+{
+<link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/1.1.2/weui.min.css">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            border-radius: 0;
+            -webkit-appearance: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            background: none;
+        }
+
+        body {
+        }
+
+        .code {
+            width: 70%;
+            padding: 10px;
+            background: #fff;
+            margin: 0 auto;
+            position: absolute;
+            left: 50%;
+            top: 40%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+            .code .bt {
+                text-align: center;
+                font-size: 20px;
+                line-height: 2;
+                color: #333;
+            }
+
+            .code img {
+                width: 100%;
+            }
+        h2 {
+            font-size: 14px; line-height: 1.25; color: #999;
+        }
+    </style>
+
+}
+
+@*<div style="margin-top:50px">
+        <h2>
+            <a href='@Model.Qrcode'> 点我支付</a>
+        </h2>
+    </div>*@
+@if (Model.Code == "0")
+{
+    if (isImg)
+    {
+
+        <div class="code">
+            <img src="/huihe/GetQrCode?qrcode=@Model.Qrcode" alt="" />
+            <p class="bt">扫码支付</p>
+        </div>
+    }
+    else
+    {
+        <script>
+
+            $(function () {
+                var url = '@Model.Qrcode';
+                window.location.href = url;
+            })
+
+        </script>
+    }
+
+}
+else
+{
+    
+    
+    <div class="weui-msg">
+        <div class="weui-msg__icon-area"><i class="weui-icon-warn weui-icon_msg"></i></div>
+        <div class="weui-msg__text-area">
+            <h2 class="weui-msg__title">支付失败</h2>
+            <p class="weui-msg__desc">@Model.Message<a href="javascript:void(0);"></a></p>
+            <p class="weui-msg__desc">错误code:<a href="javascript:void(0);">@Model.Code</a></p>
+
+        </div>
+        <div class="weui-msg__opr-area">
+            @*<p class="weui-btn-area">
+                <a href="javascript:history.back();" class="weui-btn weui-btn_primary">推荐操作</a>
+                <a href="javascript:history.back();" class="weui-btn weui-btn_default">辅助操作</a>
+            </p>*@
+        </div>
+      
+    </div>
+    @*<h2>支付失败</h2>
+    <h2>@Model.Code</h2>
+    <h2>@Model.Message</h2>
+    <h2>@Model.Data</h2>*@
+}
+
